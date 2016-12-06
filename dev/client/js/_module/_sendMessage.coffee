@@ -22,4 +22,5 @@ class SendMessage
     _this.socket.emit 'text', _this.text
     _this.input.val('')
     _this.createText(_this.text)
+    
 module.exports = SendMessage
