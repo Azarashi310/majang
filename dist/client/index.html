@@ -3,17 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>majang</title>
-    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script src="../common/js/lib.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="./css/trump.css">
+    <link rel="stylesheet" href="../common/css/reset.css">
     <script src="js/client.min.js"></script>
   </head>
   <body>
-    <div class="chat">
-      <ul></ul>
-      <form>
-        <input type="text" name="message" placeholder="input message">
-        <input type="submit" value="Send">
-      </form>
+    <div id="trump">
+      <div class="enemyfield">
+        <ul class="enemycards"></ul>
+      </div>
+      <div class="sharefield">
+        <div class="dropcards"></div>
+        <div class="talon"></div>
+      </div>
+      <div class="myfield">
+        <ul class="mycards"></ul>
+      </div>
     </div>
   </body>
 </html>

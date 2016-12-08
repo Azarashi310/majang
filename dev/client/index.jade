@@ -3,12 +3,19 @@ html(lang="ja")
    head
       meta(charset="utf-8")
       title majang
-      script(src="http://localhost:3000/socket.io/socket.io.js")
       script(src="../common/js/lib.js")
+      script(src="http://localhost:3000/socket.io/socket.io.js")
+      link(rel="stylesheet",href="./css/trump.css")
+      link(rel="stylesheet",href="../common/css/reset.css")
       script(src="js/client.min.js")
    body
-      .chat
-         ul
-         form
-            input(type="text",name="message",placeholder="input message")
-            input(type="submit",value="Send")
+      #trump
+         .enemyfield
+            ul.enemycards
+         .sharefield
+            .dropcards
+
+            .talon
+
+         .myfield
+            ul.mycards

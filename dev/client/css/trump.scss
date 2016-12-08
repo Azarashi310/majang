@@ -1,0 +1,125 @@
+@charset "utf-8";
+body{
+
+}
+#trump{
+	.enemyfield{
+		width:100%;
+		height:120px;
+		background-color: #977b15;
+	}
+	.sharefield{
+		width:100%;
+		height:300px;
+		background-color: #3c510c;
+		.talon{
+			width:80px;
+			height:130px;
+		}
+		.dropcards{
+			width:100px;
+			height:100px;
+		}
+	}
+	.myfield{
+		width:100%;
+		height:120px;
+		background-color: #977b15;
+	}
+	.enemycards{
+		list-style: none;
+		.card{
+			width:80px;
+			height:120px;
+			border:solid 1px #000;
+			border-radius: 10px;
+			display: inline-block;
+			overflow: hidden;
+			background-color: #fff;
+			background-image: url(../../common/images/cards/z02.png);
+			background-size: cover;
+			background-position: top center;
+		}
+	}
+	.mycards{
+		list-style: none;
+		.card{
+			width:80px;
+			height:120px;
+			border:solid 1px #000;
+			border-radius: 10px;
+			display: inline-block;
+			overflow: hidden;
+			background-color: #fff;
+			background-size: cover;
+			background-position: top center;
+			&:hover{
+				opacity:0.6;
+			}
+			&[data-kind='s']{
+				$counter:"";
+				@for $i from 1 through 13 {
+					@if $i < 10{
+						$counter:'0#{$i}';
+					}@else{
+						$counter:$i;
+					}
+					&[data-num='#{$i}']{
+						background-image: url('../../common/images/cards/s'+'#{$counter}'+'.png');
+					}
+				}
+			}
+			&[data-kind='h']{
+				$counter:"";
+				@for $i from 1 through 13 {
+					@if $i < 10{
+						$counter:'0#{$i}';
+					}@else{
+						$counter:$i;
+					}
+					&[data-num='#{$i}']{
+						background-image: url('../../common/images/cards/h'+'#{$counter}'+'.png');
+					}
+				}
+			}
+
+			&[data-kind='d']{
+				$counter:"";
+				@for $i from 1 through 13 {
+					@if $i < 10{
+						$counter:'0#{$i}';
+					}@else{
+						$counter:$i;
+					}
+					&[data-num='#{$i}']{
+						background-image: url('../../common/images/cards/d'+'#{$counter}'+'.png');
+					}
+				}
+			}
+			&[data-kind='c']{
+				$counter:"";
+				@for $i from 1 through 13 {
+					@if $i < 10{
+						$counter:'0#{$i}';
+					}@else{
+						$counter:$i;
+					}
+					&[data-num='#{$i}']{
+						background-image: url('../../common/images/cards/c'+'#{$counter}'+'.png');
+					}
+				}
+			}
+			//span{
+			//	display: block;
+			//	text-align: center;
+			//	padding:10px 0;
+			//	&:before{
+			//		content: '';
+			//		display: block;
+			//		text-align: center;
+			//		font-size:16px;
+			//	}
+			//}
+		}
+	}
+}
