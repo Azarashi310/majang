@@ -10,7 +10,6 @@ class Trump
     @socket.on 'deal',(card)->
       console.log card
       _this.myCards.push(card)
-      console.log 'mycards',_this.myCards
     @socket.emit 'feed',5
     @socket.on 'create',->
       $.each _this.myCards, (index, value) ->
