@@ -4,9 +4,8 @@ class GetClient
 		@count
 		@io = io
 	init:->
-		@clients = @io.sockets.clients()
-		@count = @clients.length
-		console.log @count
+		
 	clientCount: ->
-		return @count
+		@clients = Object.keys(@io.sockets.connected);
+		return @clients
 module.exports = GetClient

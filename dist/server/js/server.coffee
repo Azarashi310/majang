@@ -1,5 +1,5 @@
 io = require('socket.io')()
-GetClient = require('./_util/getClient')
+GetClient = require('./_util/getClient.coffee')
 TrumpServer = require('./_game/_trumpServer')
 io.on 'connection',(socket)->
 	cards = []
@@ -7,9 +7,9 @@ io.on 'connection',(socket)->
 	cards = trumpServer.init()
 	getClient = new GetClient(io)
 	getClient.init()
-	count = getClient.clientCount()
-	clients = findClientsSocket()
-	console.log clients['connected']
+	clients = getClient.clientCount()
+	console.log clients
+	io.sockets.emit 'clientList',clients
 	socket.on 'feed',(num)->
 		i = 0
 		while i < num
