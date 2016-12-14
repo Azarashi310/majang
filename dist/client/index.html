@@ -6,23 +6,27 @@
     <script src="../common/js/lib.js"></script>
     <script src="http://localhost:3000/socket.io/socket.io.js"></script>
     <link rel="stylesheet" href="./css/trump.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="../common/css/reset.css">
     <script src="js/client.min.js"></script>
   </head>
   <body>
-    <div id="util">
-      <ul class="userlist"></ul>
-    </div>
-    <div id="trump">
-      <div class="enemyfield">
-        <ul class="enemycards"></ul>
+    <div id="main">
+      <div id="trump">
+        <div class="enemyfield">
+          <ul class="enemycards"></ul>
+        </div>
+        <div class="sharefield">
+          <div class="dropcards"></div>
+          <div class="talon"></div>
+        </div>
+        <div class="myfield">
+          <ul class="mycards"></ul>
+        </div>
       </div>
-      <div class="sharefield">
-        <div class="dropcards"></div>
-        <div class="talon"></div>
-      </div>
-      <div class="myfield">
-        <ul class="mycards"></ul>
+      <div id="util">
+        <p class="subhead">ユーザーリスト</p>
+        <ul class="userlist"></ul>
       </div>
     </div>
   </body>

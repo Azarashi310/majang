@@ -1,0 +1,22 @@
+#main{
+	width:1400px;
+	margin:0 auto;
+}
+#util{
+	float: left;
+	border: 2px solid #000;
+	box-sizing: border-box;
+	width:400px;
+	.subhead{
+		text-align: center;
+		background-color: #009999;
+		color: #ffffff;
+	}
+	.userlist{
+		list-style: none;
+		.user{
+			text-align: center;
+			border-top:2px solid #000;
+		}
+	}
+}
