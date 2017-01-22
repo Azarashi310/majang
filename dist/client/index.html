@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="init">
   <head>
     <meta charset="utf-8">
     <title>majang</title>
     <script src="../common/js/lib.js"></script>
     <script src="http://localhost:3000/socket.io/socket.io.js"></script>
-    <link rel="stylesheet" href="./css/trump.css">
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="../common/css/reset.css">
     <script src="js/client.min.js"></script>
   </head>
   <body>
+    <div id="input">
+      <div class="name">
+        <div class="description">
+          <p>your name?</p>
+        </div>
+        <div class="inputs">
+          <input class="value">
+          <button class="submit">OK</button>
+        </div>
+      </div>
+    </div>
     <div id="main">
       <div id="trump">
         <div class="enemyfield">

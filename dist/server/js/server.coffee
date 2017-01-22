@@ -2,7 +2,8 @@ io = require('socket.io')()
 GetClient = require('./_util/getClient.coffee')
 TrumpServer = require('./_game/_trumpServer')
 cards = []
-io.on 'connection',(socket)->
+clientsList = {};
+io.on 'connection',(socket,name)->
 	trumpServer = new TrumpServer
 	if cards.length < 1
 		cards = trumpServer.init()
@@ -18,4 +19,7 @@ io.on 'connection',(socket)->
 			i++
 			if i == 5
 				io.to(socket.id).emit 'create'
+	socket.on 'disconnect', ->
+
+
 io.listen 3000

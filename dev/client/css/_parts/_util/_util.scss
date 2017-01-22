@@ -1,6 +1,14 @@
-#main{
-	width:1400px;
-	margin:0 auto;
+@charset "utf-8";
+#input{
+	width:500px;
+	margin:50px auto 0 auto;
+	text-align: center;
+	.description{
+		font-size: 16px;
+	}
+	.inputs{
+		margin:10px 0 0 0;
+	}
 }
 #util{
 	float: left;
